@@ -4,7 +4,7 @@
   "description": "react, redux, bootstrap",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --define process.env.NODE_ENV='\"production\"' --progress --colors",
+    "build": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors",
     "dev": "webpack-dev-server  --progress --profile --colors --hot --devtool eval",
     "publish-mac": "export BUILD_DEV=dev && webpack-dev-server",
     "publish-win": "set BUILD_DEV=dev && webpack-dev-server",

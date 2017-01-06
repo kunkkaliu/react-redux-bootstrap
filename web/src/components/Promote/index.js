@@ -14,25 +14,10 @@ class Promote extends Component {
                 </div>
                 <ul className="list-group">
                     <li className="list-group-item">
-                        <a href='http://ruby-china.liuzhen.me' target='_blank'>RubyChina 克隆 | React.js</a>
+                        <a href='https://www.guazi.com' target='_blank'>瓜子二手车</a>
                     </li>
                     <li className="list-group-item">
-                        <a href='http://v2ex.liuzhen.me' target='_blank'>V2EX 克隆 | Vue.js</a>
-                    </li>
-                    <li className="list-group-item">
-                        <a href='http://liuzhen.me' target='_blank'>Rina's Blog</a>
-                    </li>
-                    <li className="list-group-item">
-                        <a href='http://ecssz.com/' target='_blank'>ECS</a>
-                    </li>
-                    <li className="list-group-item">
-                        <a href='https://github.com/liuzhenangel/react-ruby-china' target='_blank'>RubyChina Clone Github</a>
-                    </li>
-                    <li className="list-group-item">
-                        <a href='https://github.com/liuzhenangel/v2ex_frontend' target='_blank'>V2EX Clone Github</a>
-                    </li>
-                    <li className="list-group-item">
-                        <a href='https://github.com/liuzhenangel' target='_blank'>Rina's GitHub</a>
+                        <a href='https://github.com/kunkkaliu' target='_blank'>Kunkkaliu's GitHub</a>
                     </li>
                 </ul>
             </div>

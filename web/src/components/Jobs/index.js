@@ -38,7 +38,7 @@ class Jobs extends React.Component {
                     </div>
                 </div>
                 <Lists topics={this.props.topics} />
-                <Paginate options={{node_id: 25}}/>
+                <Paginate options={{node_id: 25}} pageCount={20} perPage={20}/>
             </div>
         );
     }

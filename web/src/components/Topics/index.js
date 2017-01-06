@@ -12,6 +12,7 @@ import Lists from '../Lists';
 class Topics extends React.Component {
     constructor(props) {
         super(props);
+        this.uid = 1;
         this.state = {
             type: this.props.location.query.type||'last_actived',
         };
@@ -22,16 +23,16 @@ class Topics extends React.Component {
     }
 
     handleClick = (type) => {
-        this.setState({type: type})
-        this.props.getTopics({type: type})
-    }
+        this.uid ++;
+        this.setState({type: type}, () => this.props.getTopics({type: type}));
+    };
 
     render() {
         return (
             <div className='panel panel-default topic-lists'>
                 <div className='panel-heading text-right'>
                     <span className='separator light-gray-color'>查看:</span>
-                    <Link to='/topics' onClick={() => this.handleClick('last_actived')}>默认</Link>
+                    <Link to='/topics?type=last_actived' onClick={() => this.handleClick('last_actived')}>默认</Link>
                     <span className='separator'>/</span>
                     <span className='glyphicon glyphicon-heart right' title='精华帖'></span>
                     <Link to='/topics?type=excellent' onClick={() => this.handleClick('excellent')}>优质帖子</Link>
@@ -41,7 +42,7 @@ class Topics extends React.Component {
                     <Link to='/topics?type=recent' onClick={() => this.handleClick('recent')}>最新创建</Link>
                 </div>
                 <Lists topics={this.props.topics} />
-                <Paginate options={{type: this.state.type}}/>
+                <Paginate key={this.uid} options={{type: this.state.type}} pageCount={20} perPage={20}/>
             </div>
         );
     }

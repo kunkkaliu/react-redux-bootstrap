@@ -31,7 +31,7 @@
     "react-addons-transition-group": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-md-editor": "^0.2.2",
-    "react-paginate": "^2.2.3",
+    "react-paginate": "^4.1.0",
     "react-redux": "^4.4.6",
     "react-router": "^2.8.1",
     "redux": "^3.6.0",

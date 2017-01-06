@@ -13,17 +13,17 @@ class Remote extends React.Component {
     }
 
     componentWillMount () {
-        this.props.getTopics({node_id: 25, limit: 150})
+        this.props.getTopics({node_id: 25, limit: 150});
     }
 
     render() {
-        let remote = []
+        let remote = [];
         this.props.topics.forEach(topic => {
             if (topic.title.includes('远程')) {
                 remote.push(topic)
             }
         })
-        const count = remote.length
+        const count = remote.length;
         return (
             <div className='panel panel-default topic-lists'>
                 <div className='panel-heading'>

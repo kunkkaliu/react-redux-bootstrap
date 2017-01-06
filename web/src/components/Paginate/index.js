@@ -13,15 +13,13 @@ class Paginate extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            offset: 0,
-            pageNum: 20,
-            perPage: 20
+            offset: 0
         }
     }
 
     handlePageClick = (data) => {
         let selected = data.selected;
-        let offset = Math.ceil(selected * this.state.perPage);
+        let offset = Math.ceil(selected * this.props.perPage);
 
         this.setState({offset: offset}, () => {
             let options = this.props.options;
@@ -36,12 +34,12 @@ class Paginate extends React.Component {
             <div className='panel-footer'>
                 <ReactPaginate previousLabel={"上一页"}
                                nextLabel={"下一页"}
-                               breakLabel={<a href="">...</a>}
+                               breakLabel={<span>...</span>}
                                breakClassName={"break-me"}
-                               pageNum={this.state.pageNum}
+                               pageCount={this.props.pageCount}
                                marginPagesDisplayed={1}
                                pageRangeDisplayed={3}
-                               clickCallback={this.handlePageClick}
+                               onPageChange={this.handlePageClick}
                                containerClassName={"pagination"}
                                subContainerClassName={"pages pagination"}
                                activeClassName={"active"} />

@@ -19,8 +19,7 @@ module.exports = {
         //join and resolve diff
         path: path.join(__dirname,'/public/dist'),
 
-        // filename: 'bundle.js',
-        filename: '[name].[chunkhash].js',
+        filename: process.argv.indexOf('-p') > -1 ? '[name].[chunkhash].js' : 'bundle.js',
 
         publicPath: '/dist/'
     },
@@ -49,8 +48,7 @@ module.exports = {
             template: './web/index.html',
             filename: '../index.html'
         }),
-        // new ExtractTextPlugin("[name].css"),
-        new ExtractTextPlugin("[name].[contenthash].css"),
+        new ExtractTextPlugin(process.argv.indexOf('-p') > -1 ? "[name].[contenthash].css" : "[name].css"),
 
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),

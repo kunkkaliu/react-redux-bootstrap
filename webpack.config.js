@@ -76,7 +76,7 @@ module.exports = {
             },
             { test: /\.(jpe?g|png|eot|woff|svg|ttf|woff2|gif)$/,
                 loader: 'url-loader',
-                query: {limit: 204800}
+                query: {limit: 10240}
             },
             {
                 test: /\.css$/,

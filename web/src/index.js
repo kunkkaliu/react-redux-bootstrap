@@ -21,7 +21,7 @@ const validate = function (next, replace, callback) {
 
 ReactDOM.render(
   <Provider store={store}>
-      <Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
+      <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
           <Route path="/" component={App} onEnter={validate}>
               <IndexRoute component={Home} onEnter={validate}/>
               <Route path="topics" component={Topics}/>
